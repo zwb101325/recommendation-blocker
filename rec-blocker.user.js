@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         B站/Bilibili/知乎推荐屏蔽｜隐藏推荐/关闭首页推荐/净化页面插件
 // @namespace    https://greasyfork.org/zh-CN/users/1573237
-// @version      1.2.4
+// @version      1.2.5
 // @description  隐藏B站/知乎导航栏、搜索框、首页、侧边栏推荐
 // @author       zwb299
 // @match        *://*.bilibili.com/*

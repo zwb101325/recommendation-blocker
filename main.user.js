@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         B站/知乎/豆包推荐屏蔽｜隐藏推荐/关闭首页推荐/净化页面插件
 // @namespace    https://greasyfork.org/zh-CN/users/1573237
-// @version      1.3.1
+// @version      1.3.2
 // @description  隐藏B站/知乎/豆包导航栏、搜索框、首页、侧边栏推荐
 // @author       zwb299
 // @match        *://*.bilibili.com/*
@@ -18,21 +18,48 @@
     'use strict';
     /* global $ */
 
-    //初次执行
-    simplifyBilibili();
-    simplifyZhihu();
+    const enableBilibili = GM_getValue('enableBilibili', true);
+    const enableZhihu = GM_getValue('enableZhihu', true);
+    const enableDoubao = GM_getValue('enableDoubao', true);
+
+    addToggleMenu('B站屏蔽', 'enableBilibili', enableBilibili);
+    addToggleMenu('知乎屏蔽', 'enableZhihu', enableZhihu);
+    addToggleMenu('豆包屏蔽', 'enableDoubao', enableDoubao);
+
+    if (enableBilibili) simplifyBilibili();
+    if (enableZhihu) simplifyZhihu();
+    if (enableDoubao) simplifyDoubao();
 
     //监听 DOM 变化
     const observer = new MutationObserver((mutations) => {
-        simplifyBilibili();
-        simplifyZhihu();
+        if (enableBilibili) simplifyBilibili();
+        if (enableZhihu) simplifyZhihu();
+        if (enableDoubao) simplifyDoubao();
     });
     observer.observe(document.body, {childList: true, subtree: true});
 
 
     //===============================函数区===============================
+    
+    function getStatusText(isOn) {
+        if (isOn) {
+            return '🟢 开启';
+        } else {
+            return '🔴 关闭';
+        }
+    }
 
-    //清除B站推荐
+
+    function addToggleMenu(name, key, currentValue) {
+        const text = '⚙️ ' + name + ' | ' + getStatusText(currentValue);
+        GM_registerMenuCommand(text, function () {
+            const newValue = !currentValue;
+            GM_setValue(key, newValue);
+            location.reload();
+        });
+    }
+
+    
     function simplifyBilibili(){
         // 导航栏
         $(".left-entry").css('visibility', 'hidden');
@@ -56,7 +83,7 @@
         $(".video-pod__body").css('max-height', '450px');
     }
 
-    //清除知乎推荐
+
     function simplifyZhihu(){
         // 导航栏
         $(".css-72pd91").css('visibility', 'hidden');
@@ -84,5 +111,10 @@
         $(".Post-Sub").remove();
     }
 
-
+    
+     function simplifyDoubao(){
+        // 首页
+        $("#experiment-guidance-suggestions").remove();
+    }
+    
 })();

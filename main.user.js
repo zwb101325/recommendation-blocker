@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         B站/知乎/豆包推荐屏蔽｜隐藏推荐/关闭首页推荐/净化页面插件
 // @namespace    https://greasyfork.org/zh-CN/users/1573237
-// @version      1.3.2
+// @version      1.3.3
 // @description  隐藏B站/知乎/豆包导航栏、搜索框、首页、侧边栏推荐
 // @author       zwb299
 // @match        *://*.bilibili.com/*
 // @match        *://*.zhihu.com/*
+// @match        *://*.doubao.com/*
 // @icon         https://cdn.simpleicons.org/adblock
 // @require      https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js
 // @grant        GM_registerMenuCommand

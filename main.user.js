@@ -111,7 +111,7 @@
     }
 
     
-     function simplifyDoubao(){
+    function simplifyDoubao(){
         // 首页
         $("#experiment-guidance-suggestions").remove();
     }

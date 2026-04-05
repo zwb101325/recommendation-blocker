@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         recommendation-blocker
 // @namespace    https://greasyfork.org/zh-CN/users/1573237
-// @version      1.3.6
-// @description  隐藏B站/知乎/豆包导航栏、搜索框、首页、侧边栏推荐
+// @version      1.3.7
+// @description  隐藏常用网站导航栏、搜索框、首页、侧边栏推荐
 // @author       zwb299
 // @match        *://*.bilibili.com/*
 // @match        *://*.zhihu.com/*

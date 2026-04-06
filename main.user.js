@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         recommendation-blocker
 // @namespace    https://greasyfork.org/zh-CN/users/1573237
-// @version      1.3.9
+// @version      1.3.10
 // @description  隐藏常用网站导航栏、搜索框、首页、侧边栏推荐
 // @author       zwb299
 // @match        *://*.bilibili.com/*
@@ -13,7 +13,6 @@
 // @grant        GM_getValue
 // @grant        GM_setValue
 // @license      MIT
-// @run-at      document-start
 // ==/UserScript==
 
 (function() {
@@ -63,12 +62,12 @@
 
     function simplifyBilibili(){
         // 导航栏
+        $(".left-entry__title").attr('href', 'https://search.bilibili.com/');
         $(".left-entry").css('visibility', 'hidden');
         $(".right-entry").css('visibility', 'hidden');
         $(".entry-title").css('visibility', 'visible');
         $(".mini-header__logo").css('visibility', 'visible');
         $(".header-entry-mini").css('visibility', 'visible');
-        $(".left-entry__title").attr('href', 'https://search.bilibili.com/');
 
         // 搜索框
         $(".nav-search-input").attr('placeholder', '');
@@ -87,7 +86,7 @@
 
     function simplifyZhihu(){
         // 导航栏
-        $('a[href="https://www.zhihu.com"]').attr('href', 'https://www.zhihu.com/search');
+        $(".css-lgijre > a").attr('href', 'https://www.zhihu.com/search');
         $(".css-72pd91").css('visibility', 'hidden');
         $(".css-1vbrp2j").css('visibility', 'hidden');
 

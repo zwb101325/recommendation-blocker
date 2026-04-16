@@ -1,24 +1,27 @@
-# B站/知乎/豆包推荐屏蔽
-隐藏B站/知乎/豆包导航栏、搜索框、首页、侧边栏推荐
+# Recommendation Blocker
+> 隐藏B站/知乎/豆包导航栏、搜索框、首页、侧边栏推荐
 
-## 功能
+## ✨ 功能
 - 隐藏 B站 导航栏、搜索框、首页、侧边栏推荐
 - 隐藏 知乎 导航栏、搜索框、首页、侧边栏推荐
 - 隐藏 豆包 首页推荐
 
-## 使用方法
-1. 安装[油猴插件](https://www.tampermonkey.net)
-2. 安装[本脚本](https://greasyfork.org/scripts/567030)
-3. 刷新网页即可生效
+## 📦 安装
+1. 安装 [Tampermonkey](https://www.tampermonkey.net/) 浏览器扩展
+2. 访问 [本脚本页面](https://greasyfork.org/zh-CN/scripts/567030)
+3. 点击「安装此脚本」
 
-## 说明
+## 💻 兼容性
 - 本脚本通过修改页面 DOM/CSS 来隐藏推荐板块
 - 若网站更新导致脚本失效，请在反馈中附上问题页面的截图
 
-## 效果图
+## 🎬 效果预览
 
 | 使用前 | 使用后 |
 |--------|--------|
 | <img src="https://greasyfork.s3.us-east-2.amazonaws.com/u7gbucribb6vx5jzrr4juc2clg12" width="600"> | <img src="https://greasyfork.s3.us-east-2.amazonaws.com/0t8g2zoledkqit75tizjh9qciius" width="600"> |
 | <img src="https://greasyfork.s3.us-east-2.amazonaws.com/9s942y50ghuo3cbbdlk6ojmsa9l3" width="600"> | <img src="https://greasyfork.s3.us-east-2.amazonaws.com/krs5m40lk956ngp2bi0lnpo0ddge" width="600"> |
 
+## ⭐ 支持项目
+
+如果这个项目对你有帮助，欢迎点个 ⭐ Star 支持一下！
